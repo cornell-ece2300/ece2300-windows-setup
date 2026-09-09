@@ -3,7 +3,7 @@
 # ========================================================================
 
 $Root        = Split-Path -Parent $MyInvocation.MyCommand.Path
-$UserData    = Join-Path $Root "vscode-user-data"
+$UserData    = Join-Path $env:LOCALAPPDATA "ece2300\vscode-user-data"
 $Settings    = Join-Path $Root "vscode-settings"
 $RemoteHome  = "/home/$env:USERNAME/ece2300"
 
