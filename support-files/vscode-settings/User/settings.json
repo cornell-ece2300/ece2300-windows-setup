@@ -14,6 +14,9 @@
   // Allow tasks to run automatically (for default terminal)
   "task.allowAutomaticTasks": "on",
 
+  // Turn on auto save by default
+  "files.autoSave": "afterDelay",
+
   // Tell Remote-SSH that this host is Linux
   "remote.SSH.remotePlatform": {
     "ecelinux-01.ece.cornell.edu": "linux",
@@ -36,9 +39,9 @@
     "ecelinux-18.ece.cornell.edu": "linux",
     "ecelinux-19.ece.cornell.edu": "linux",
     "ecelinux-20.ece.cornell.edu": "linux"
-  }
+  },
 
-  // Install Verilog extension on surfer
+  // Install Verilog extension on remote server
   "remote.SSH.defaultExtensions": [
     "mshr-h.VerilogHDL",
   ]
