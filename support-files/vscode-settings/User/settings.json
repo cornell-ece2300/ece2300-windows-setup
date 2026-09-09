@@ -1,0 +1,45 @@
+{
+  // Don't show the welcome page
+  "workbench.startupEditor": "none",
+
+  // Disable all AI features
+  "chat.disableAIFeatures": true,
+
+  // Don't ask whether to trust the remote folder
+  "security.workspace.trust.enabled": false,
+
+  // Don't show right-hand chat sidebar
+  "workbench.secondarySideBar.defaultVisibility": "hidden",
+
+  // Allow tasks to run automatically (for default terminal)
+  "task.allowAutomaticTasks": "on",
+
+  // Tell Remote-SSH that this host is Linux
+  "remote.SSH.remotePlatform": {
+    "ecelinux-01.ece.cornell.edu": "linux",
+    "ecelinux-02.ece.cornell.edu": "linux",
+    "ecelinux-03.ece.cornell.edu": "linux",
+    "ecelinux-04.ece.cornell.edu": "linux",
+    "ecelinux-05.ece.cornell.edu": "linux",
+    "ecelinux-06.ece.cornell.edu": "linux",
+    "ecelinux-07.ece.cornell.edu": "linux",
+    "ecelinux-08.ece.cornell.edu": "linux",
+    "ecelinux-09.ece.cornell.edu": "linux",
+    "ecelinux-10.ece.cornell.edu": "linux",
+    "ecelinux-11.ece.cornell.edu": "linux",
+    "ecelinux-12.ece.cornell.edu": "linux",
+    "ecelinux-13.ece.cornell.edu": "linux",
+    "ecelinux-14.ece.cornell.edu": "linux",
+    "ecelinux-15.ece.cornell.edu": "linux",
+    "ecelinux-16.ece.cornell.edu": "linux",
+    "ecelinux-17.ece.cornell.edu": "linux",
+    "ecelinux-18.ece.cornell.edu": "linux",
+    "ecelinux-19.ece.cornell.edu": "linux",
+    "ecelinux-20.ece.cornell.edu": "linux"
+  }
+
+  // Install Verilog extension on surfer
+  "remote.SSH.defaultExtensions": [
+    "mshr-h.VerilogHDL",
+  ]
+}
