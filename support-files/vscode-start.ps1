@@ -59,12 +59,14 @@ code --install-extension mshr-h.VerilogHDL
 code --install-extension surfer-project.surfer
 
 # ------------------------------------------------------------------------
-# Create VS Code user-data directory
+# Recreate VS Code user-data directory from scratch
 # ------------------------------------------------------------------------
 
-if (-not (Test-Path $UserData)) {
-  Copy-Item $Settings $UserData -Recurse
+if (Test-Path $UserData) {
+  Remove-Item $UserData -Recurse -Force
 }
+
+Copy-Item $Settings $UserData -Recurse
 
 # ------------------------------------------------------------------------
 # Create SSH configuration
