@@ -38,7 +38,8 @@
     "ecelinux-17.ece.cornell.edu": "linux",
     "ecelinux-18.ece.cornell.edu": "linux",
     "ecelinux-19.ece.cornell.edu": "linux",
-    "ecelinux-20.ece.cornell.edu": "linux"
+    "ecelinux-20.ece.cornell.edu": "linux",
+    "verilog-exam.ece.cornell.edu": "linux"
   },
 
   // Install Verilog extension on remote server

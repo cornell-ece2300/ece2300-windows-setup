@@ -33,18 +33,21 @@ $ServerNum = Read-Host "Enter ecelinux server number (1-20)"
 
 # Validate the input
 if ($ServerNum -notmatch '^\d+$' -or
-  [int]$ServerNum -lt 1 -or
-  [int]$ServerNum -gt 20) {
+  (([int]$ServerNum -lt 1 -or [int]$ServerNum -gt 20) -and
+   [int]$ServerNum -ne 99)) {
 
   Write-Host "Please enter a number from 1 to 20."
   exit 1
 }
 
-# Convert 1 -> 01, 7 -> 07, etc.
-$Server = "{0:D2}" -f [int]$ServerNum
-
 # Build the full hostname
-$HostName = "ecelinux-$Server.ece.cornell.edu"
+if ([int]$ServerNum -eq 99) {
+  $HostName = "verilog-exam.ece.cornell.edu"
+} else {
+  # Convert 1 -> 01, 7 -> 07, etc.
+  $Server = "{0:D2}" -f [int]$ServerNum
+  $HostName = "ecelinux-$Server.ece.cornell.edu"
+}
 
 Write-Host ""
 Write-Host "Using $HostName"
@@ -79,7 +82,7 @@ if (-not (Test-Path $SshDir)) {
 }
 
 @"
-Host ecelinux-*.ece.cornell.edu
+Host ecelinux-*.ece.cornell.edu verilog-exam.ece.cornell.edu
   User $env:USERNAME
 "@ | Set-Content -Encoding ascii (Join-Path $SshDir "config")
 
